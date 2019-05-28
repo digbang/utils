@@ -90,8 +90,8 @@ abstract class CriteriaRequest implements Criteria
     public function validate(): void
     {
         $this->request->validate([
-            'sort' => 'sometimes|array',
-            'sort.*' => 'in:asc,desc,ASC,DESC',
+            static::SORT_KEY => 'sometimes|array',
+            static::SORT_KEY . '.*' => 'in:asc,desc,ASC,DESC',
         ]);
     }
 
