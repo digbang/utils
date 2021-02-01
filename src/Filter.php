@@ -40,7 +40,7 @@ abstract class Filter
     }
 
     /**
-     * Returns (bool) false on falsy values. Null on empty. True otherwise.
+     * Returns (bool) false on false, 'false', 0 and '0' values. Null on empties (null, '' and []). True otherwise.
      */
     public function getBoolean(string $key, $default = null)
     {
