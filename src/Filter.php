@@ -46,15 +46,15 @@ abstract class Filter
     {
         $value = $this->getRaw($key);
 
-        if ($this->has($key)) {
-            if ($value === false || $value === 'false' || $value === '0' || $value === 0) {
-                return false;
-            }
-
-            return true;
+        if ($this->isEmpty($value) && $value !== false) {
+            return null;
         }
 
-        return null;
+        if ($value === false || $value === 'false' || $value === '0' || $value === 0) {
+            return false;
+        }
+
+        return true;
     }
 
     public function has(string $key)
