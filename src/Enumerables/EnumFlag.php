@@ -22,9 +22,6 @@ abstract class EnumFlag extends EnumBase
         $this->value = $flags;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function __toString()
     {
         return (string) $this->getValue();

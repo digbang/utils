@@ -1,9 +1,9 @@
 <?php
 
 $finder = PhpCsFixer\Finder::create()
-    ->in(['src', 'tests']);
+    ->in(['src']);
 
-return PhpCsFixer\Config::create()
+return (new PhpCsFixer\Config())
     ->setRules([
         '@Symfony' => true,
         'array_syntax' => ['syntax' => 'short'],
@@ -33,8 +33,7 @@ return PhpCsFixer\Config::create()
         'ordered_imports' => true,
         'phpdoc_align' => false,
         'phpdoc_order' => true,
-        'psr0' => false,
-        'psr4' => true,
+        'psr_autoloading' => ['dir' => 'src'],
         'yoda_style' => false,
     ])
     ->setFinder($finder);

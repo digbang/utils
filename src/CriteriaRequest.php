@@ -5,20 +5,20 @@ namespace Digbang\Utils;
 use Illuminate\Http\Request;
 
 /**
-    Example usage:
-
-    class UserCriteriaRequest extends CriteriaRequest
-    {
-       protected function getFilterClass(): string
-       {
-            return UserFilter::class;
-       }
-
-       protected function getFilterClass(): string
-       {
-            return UserSorting::class;
-       }
-    }
+ * Example usage:
+ *
+ * class UserCriteriaRequest extends CriteriaRequest
+ * {
+ * protected function getFilterClass(): string
+ * {
+ * return UserFilter::class;
+ * }
+ *
+ * protected function getFilterClass(): string
+ * {
+ * return UserSorting::class;
+ * }
+ * }
  */
 
 /**
