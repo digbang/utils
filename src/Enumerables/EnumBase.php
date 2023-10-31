@@ -13,7 +13,7 @@ abstract class EnumBase implements \JsonSerializable
      */
     abstract public static function getAllAsObjects(): array;
 
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         return $this->getValue();
     }

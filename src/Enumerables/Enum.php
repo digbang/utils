@@ -14,9 +14,6 @@ abstract class Enum extends EnumBase
         $this->value = $value;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function __toString()
     {
         return $this->getValue() ?? '';

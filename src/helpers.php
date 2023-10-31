@@ -9,7 +9,6 @@ if (! function_exists('array_add')) {
      *
      * @param  array  $array
      * @param  string  $key
-     * @param  mixed  $value
      *
      * @return array
      */
@@ -82,9 +81,6 @@ if (! function_exists('array_first')) {
      * Return the first element in an array passing a given truth test.
      *
      * @param  array  $array
-     * @param  mixed  $default
-     *
-     * @return mixed
      */
     function array_first($array, callable $callback = null, $default = null)
     {
@@ -126,9 +122,6 @@ if (! function_exists('array_get')) {
      *
      * @param  \ArrayAccess|array  $array
      * @param  string  $key
-     * @param  mixed  $default
-     *
-     * @return mixed
      */
     function array_get($array, $key, $default = null)
     {
@@ -156,9 +149,6 @@ if (! function_exists('array_last')) {
      * Return the last element in an array passing a given truth test.
      *
      * @param  array  $array
-     * @param  mixed  $default
-     *
-     * @return mixed
      */
     function array_last($array, callable $callback = null, $default = null)
     {
@@ -202,8 +192,6 @@ if (! function_exists('array_prepend')) {
      * Push an item onto the beginning of an array.
      *
      * @param  array  $array
-     * @param  mixed  $value
-     * @param  mixed  $key
      *
      * @return array
      */
@@ -219,9 +207,6 @@ if (! function_exists('array_pull')) {
      *
      * @param  array  $array
      * @param  string  $key
-     * @param  mixed  $default
-     *
-     * @return mixed
      */
     function array_pull(&$array, $key, $default = null)
     {
@@ -235,8 +220,6 @@ if (! function_exists('array_random')) {
      *
      * @param  array  $array
      * @param  int|null  $num
-     *
-     * @return mixed
      */
     function array_random($array, $num = null)
     {
@@ -252,7 +235,6 @@ if (! function_exists('array_set')) {
      *
      * @param  array  $array
      * @param  string  $key
-     * @param  mixed  $value
      *
      * @return array
      */
@@ -308,8 +290,6 @@ if (! function_exists('array_where')) {
 if (! function_exists('array_wrap')) {
     /**
      * If the given value is not an array, wrap it in one.
-     *
-     * @param  mixed  $value
      *
      * @return array
      */

@@ -20,7 +20,7 @@ class Sorting
 
     public function get(array $sortFields): array
     {
-        //Validate keys
+        // Validate keys
 
         $selected = [];
         foreach ($this->sorts as $sortKey => $direction) {
