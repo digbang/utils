@@ -78,7 +78,7 @@ class QueryBuilderDecorator extends QueryBuilder
      *   'aliasJoinC' => 'aliasJoinA.fieldA',
      * ].
      */
-    public function applyJoins(array $joins, array $leftJoins = null): QueryBuilderDecorator
+    public function applyJoins(array $joins, ?array $leftJoins = null): QueryBuilderDecorator
     {
         foreach ($joins as $alias => $field) {
             $this->join($field, $alias);

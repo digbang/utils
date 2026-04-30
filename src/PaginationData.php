@@ -13,7 +13,7 @@ class PaginationData
      */
     private $limit;
 
-    public function __construct(int $limit = null, int $page = 1)
+    public function __construct(?int $limit = null, int $page = 1)
     {
         $this->limit = $limit;
         $this->page = $page;
@@ -51,7 +51,7 @@ class PaginationData
         $this->page = floor($offset / $this->limit) + 1;
     }
 
-    public function clone(int $limit = null, int $page = 1)
+    public function clone(?int $limit = null, int $page = 1)
     {
         return new static($limit, $page);
     }

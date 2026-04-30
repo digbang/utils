@@ -9,7 +9,7 @@ class EntityPagination extends LengthAwarePaginator
 {
     protected $paginationData;
 
-    public function __construct($items, int $total, PaginationData $paginationData, string $path = null)
+    public function __construct($items, int $total, PaginationData $paginationData, ?string $path = null)
     {
         $this->paginationData = $paginationData;
         $lastPage = $paginationData->getLimit() ? (int) ceil($total / $paginationData->getLimit()) : 1;

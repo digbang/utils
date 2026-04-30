@@ -7,7 +7,7 @@ abstract class Enum extends EnumBase
     /** @var string */
     protected $value;
 
-    public function __construct(string $value = null)
+    public function __construct(?string $value = null)
     {
         static::assert($value);
 
@@ -24,7 +24,7 @@ abstract class Enum extends EnumBase
         return $this->value;
     }
 
-    public function is(string $name = null): bool
+    public function is(?string $name = null): bool
     {
         return $this->value === $name;
     }
@@ -37,7 +37,7 @@ abstract class Enum extends EnumBase
         return in_array($this->value, $names, true);
     }
 
-    public function isNot(string $name = null): bool
+    public function isNot(?string $name = null): bool
     {
         return $this->value !== $name;
     }
@@ -62,17 +62,17 @@ abstract class Enum extends EnumBase
     /**
      * @deprecated use fromString
      */
-    public static function from(string $name = null)
+    public static function from(?string $name = null)
     {
         return static::fromString($name);
     }
 
-    public static function fromString(string $name = null)
+    public static function fromString(?string $name = null)
     {
         return new static ($name);
     }
 
-    protected static function assert(string $name = null)
+    protected static function assert(?string $name = null)
     {
         if (! in_array($name, static::getAllValues(), false)) {
             $oClass = new \ReflectionClass(get_called_class());

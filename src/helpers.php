@@ -82,7 +82,7 @@ if (! function_exists('array_first')) {
      *
      * @param  array  $array
      */
-    function array_first($array, callable $callback = null, $default = null)
+    function array_first($array, ?callable $callback = null, $default = null)
     {
         return Arr::first($array, $callback, $default);
     }
@@ -150,7 +150,7 @@ if (! function_exists('array_last')) {
      *
      * @param  array  $array
      */
-    function array_last($array, callable $callback = null, $default = null)
+    function array_last($array, ?callable $callback = null, $default = null)
     {
         return Arr::last($array, $callback, $default);
     }
